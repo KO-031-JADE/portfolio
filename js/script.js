@@ -222,6 +222,37 @@ lightbox.addEventListener("click",function(event){
             allSection[i].classList.toggle("open");
         }
     }
+    emailjs.init("user_1DSJpPbKBd7BzvHVwJ6Sw");		
+    //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
+    const sendEmailBtn = document.querySelector('.send-email');
+    const mailName = document.getElementById('name');
+    const mailPhone = document.getElementById('phone');
+    const mailId = document.getElementById('email');
+    const mailMessage = document.getElementById('message');
+    sendEmailBtn.addEventListener("click", function(){    	 
+    
+        // console.log(mailName.value);
+        // alert(mailName.value);
+    var templateParams = {	
+    //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+            name: mailName.value,
+            phone: mailPhone.value,
+            email: mailId.value,
+            message: mailMessage.value 
+                    };
+                
+                
+    emailjs.send('gasina85', 'template_476nj1f', templateParams)
+    //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+                
+    });
+
 
 
 
