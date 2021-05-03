@@ -349,7 +349,7 @@ input, textarea, select{
 
 .home{
     min-height: 100vh;
-    -webkit-flex:1''
+    -webkit-flex:1;
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -393,7 +393,7 @@ input, textarea, select{
     text-align: center;
     line-height: 35px;
     color:#fff;
-    margin 0 4px;
+    margin: 0 4px;
     border-radius: 50%;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
