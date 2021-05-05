@@ -5,7 +5,6 @@ window.addEventListener("load", function(){
    // removing arrow function
     setTimeout(function(){
         document.querySelector(".preloader").style.display="none";
-        alert("수정중에 있습니다!");
     },1000)
 })
 //sns 
@@ -289,7 +288,7 @@ lightbox.addEventListener("click",function(event){
     //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                alert("메일 보내기 성공!")
+                alert("메일 발송 완료!")
                 
             }, function(error) {
                 console.log('FAILED...', error);
